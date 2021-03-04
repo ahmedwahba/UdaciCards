@@ -11,6 +11,10 @@ export default StyleSheet.create({
         shadowOpacity: 0.25,
         paddingVertical: 20,
         borderRadius: 15,
+        borderTopLeftRadius:15,
+        borderTopRightRadius:15,
+        borderBottomLeftRadius:14,
+        borderBottomRightRadius:14,
       },
       title: {
           textAlign: 'center',
