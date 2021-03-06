@@ -16,7 +16,6 @@ class  NewCard extends React.Component {
     onAddCardPress = async () => {
         const { question, answer } = this.state;
         const { deckId } = this.props.route.params;
-        console.log(' card inf', this.state, this.props.route.params);
         if (deckId) {
             await this.props.addNewCard(deckId, question, answer);
             this.props.navigation.goBack();

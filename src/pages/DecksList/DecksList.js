@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, FlatList } from 'react-native';
+import { FlatList } from 'react-native';
 import styles from './DecksList.style';
 import { connect } from 'react-redux';
 import { loadDecks } from '../../actions/Decks';

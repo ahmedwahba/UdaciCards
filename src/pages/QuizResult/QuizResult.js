@@ -11,7 +11,6 @@ const background = require('../../assets/imgs/result-bg.png');
 class  QuizResult extends React.Component {
     componentWillUnmount() {
         window.notification.getScheduledLocalNotifications((notifications) => { 
-            console.log('sched -----', notifications)
             if (notifications?.length > 0) {
                 window.notification.cancelAll();
             }

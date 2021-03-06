@@ -1,5 +1,4 @@
 import React from 'react';
-import { View } from 'react-native';
 import defaultStyle from "../../components/Common/general.style";
 import styles from './DeckDetails.style';
 import PageContainer from '../../components/PageContainer/PageContainer';
@@ -28,7 +27,7 @@ class  DeckDetails extends React.Component {
         this.props.navigation.navigate(Pages.Quiz);
     }
 
-    render() { console.log('selected deck', this.props.selectedDeck)
+    render() { 
         const { selectedDeck } = this.props;
 
         return (
