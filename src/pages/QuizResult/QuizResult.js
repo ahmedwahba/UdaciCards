@@ -9,6 +9,15 @@ import { Pages } from '../../../navigationStack';
 const background = require('../../assets/imgs/result-bg.png');
 
 class  QuizResult extends React.Component {
+    componentWillUnmount() {
+        window.notification.getScheduledLocalNotifications((notifications) => { 
+            console.log('sched -----', notifications)
+            if (notifications?.length > 0) {
+                window.notification.cancelAll();
+            }
+            window.notification.scheduleNotification();
+        });
+    }
 
     onRestartQuizPress = () => {
         this.props.navigation.navigate(Pages.Quiz);
@@ -35,7 +44,7 @@ class  QuizResult extends React.Component {
                 <Text style={styles.smileyTxt}> {' : )'} </Text>
               </View>
             </Title>
-            {result && (
+            {questions && (
               <View style={styles.resultWrap}>
                 <Text style={styles.result}>{result}</Text>
                 <Text style={styles.resultOf}>of</Text>
