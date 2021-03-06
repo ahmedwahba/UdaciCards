@@ -37,7 +37,7 @@ export default class NotificationService {
 
       scheduleNotification() {
         PushNotification.localNotificationSchedule({
-          date: new Date(Date.now() + (60 * 1000)), //one day 60 * 60 * 24 seconds
+          date: new Date(Date.now() + (60 * 60 * 24 * 1000)), //one day 60 * 60 * 24 seconds
           title: "Remember Your quiz", 
           message: "You  haven't completed at least one quiz today",
           playSound: true, 
